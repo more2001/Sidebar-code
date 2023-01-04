@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-inner">
+        <header class="sidebar-header">
+          <img src="images/menu.png" class="sidebar-burger" onclick="toggle()"></img>
+
+          <img src="images/sitepoint.png" class="sidebar-logo" />
+        </header>
+
+        <nav class="sidebar-nav">
+          <button type="button">
+            <img src="images/home.png" />
+            <span>Home</span>
+          </button>
+
+          <button type="button">
+            <img src="images/settings.png" />
+            <span>Settings</span>
+          </button>
+
+          <button type="button">
+            <img src="images/help.png" />
+            <span>Help</span>
+          </button>
+
+          <button type="button">
+            <img src="images/feedback.png" />
+            <span>Feedback</span>
+          </button>
+        </nav>
+
+        <footer class="footer-class">
+          <button type="button">
+            <img src="images/logout.png" />
+            <span>Logout</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    const image = document.querySelector(".sidebar-burger");
+
+    const toggle = () => {
+      document.body.classList.toggle("open");
+
+      if (image.getAttribute('src') === "images/close.png") {
+        image.src = "images/menu.png";
+        console.log("inside if");
+      }else{
+       image.src = "images/close.png";
+       console.log("inside else");
+      }
+      
+    };
+  </script>
+</html>
